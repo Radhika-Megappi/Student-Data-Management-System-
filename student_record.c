@@ -41,6 +41,16 @@ void addRecord(SLL **ptr)
     if(*ptr == 0)
     {
         new->next = 0;
+        *ptr = new;
+    }
+    else
+    {
+        pos = *ptr;
+
+        while(pos->next != 0)
+            pos = pos->next;
+
+        new->next = 0;
         pos->next = new;
     }
 
@@ -298,7 +308,9 @@ void deleteAll(SLL **ptr)
         free(del);
     }
 
-    printf("All records deletvoid reverseLinks(SLL **ptr)
+    printf("All records deleted successfully\n");
+}
+void reverseLinks(SLL **ptr)
 {
     SLL *t = *ptr, *temp;
     SLL **a;

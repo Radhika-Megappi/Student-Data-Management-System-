@@ -391,7 +391,8 @@ void sortData(SLL *ptr)
                 strcpy(p1->name, p2->name);
                 p1->percentage = p2->percentage;
 
-                p2->rollno = t.rollno;strcpy(p2->name, t.name);
+                p2->rollno = t.rollno;
+                strcpy(p2->name, t.name);
                 p2->percentage = t.percentage;
             }
 
